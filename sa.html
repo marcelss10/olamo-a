@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convite para Sair</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #nao-btn {
+        position: absolute;
+    }
+</style>
+</head>
+<body>
+    <h1>Quer sair comigo?</h1>
+    <button id="sim-btn" onclick="responderSim()">Sim</button>
+    <button id="nao-btn" onclick="moveButton()">Não</button>
+    <script>
+        function responderSim() {
+            var resposta = confirm("Dia 12/04/2025 é nosso casamento!!");
+            if (resposta) {
+                alert("Parabéns! Nos vemos no nosso casamento!");
+            }
+        }
+
+        function moveButton() {
+            var button = document.getElementById("nao-btn");
+            var x = Math.random() * (window.innerWidth - button.offsetWidth);
+            var y = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
